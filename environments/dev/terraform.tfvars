@@ -19,10 +19,10 @@ acrs = {
 
 aks_clusters = {
   "aks-dev-nithin" = {
-    resource_group_name = "rg-dev-nithin"
-    location            = "East US"
-    dns_prefix          = "aksnithin"
-    sku_tier            = "Free"
+    resource_group_name       = "rg-dev-nithin"
+    location                  = "East US"
+    dns_prefix                = "aksnithin"
+    sku_tier                  = "Free"
     oidc_issuer_enabled       = true
     workload_identity_enabled = true
     default_node_pool = {

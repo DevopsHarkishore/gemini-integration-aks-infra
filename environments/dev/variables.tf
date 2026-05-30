@@ -25,8 +25,8 @@ variable "acrs" {
 variable "aks_clusters" {
   description = "Map of AKS clusters"
   type = map(object({
-    resource_group_name = string
-    location            = string
+    resource_group_name       = string
+    location                  = string
     dns_prefix                = string
     kubernetes_version        = optional(string)
     sku_tier                  = optional(string, "Free")
