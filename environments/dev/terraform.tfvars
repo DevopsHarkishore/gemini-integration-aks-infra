@@ -1,3 +1,4 @@
+# Last deployment trigger: Recreating infrastructure
 resource_groups = {
   "rg-dev-nithin" = {
     location = "East US"
