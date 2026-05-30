@@ -1,0 +1,18 @@
+terraform {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "~> 3.0"
+    }
+  }
+  backend "azurerm" {
+    resource_group_name  = "nithin_test"
+    storage_account_name = "nithinstorage7338557643"
+    container_name       = "nithininfra"
+    key                  = "dev.terraform.tfstate"
+  }
+}
+
+provider "azurerm" {
+  features {}
+}
