@@ -27,11 +27,14 @@ variable "aks_clusters" {
   type = map(object({
     resource_group_name = string
     location            = string
-    dns_prefix          = string
-    kubernetes_version  = optional(string)
-    sku_tier            = optional(string, "Free")
+    dns_prefix                = string
+    kubernetes_version        = optional(string)
+    sku_tier                  = optional(string, "Free")
+    oidc_issuer_enabled       = optional(bool, false)
+    workload_identity_enabled = optional(bool, false)
 
     default_node_pool = object({
+
       name                = string
       node_count          = number
       vm_size             = string
